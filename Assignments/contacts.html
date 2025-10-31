@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+
+<!----------------------BODY----------------------->
+<body>
+    <!--Navigation Section-->
+    <nav>
+      <!--Add a sandwich icon here-->
+        <div class="sandwich-icon-area">
+            <p onclick="openNav()"> &#9776; <span>Contact Us</span> </p>
+        </div>   
+    </nav>
+
+     <!--The curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="contacts.html">CONTACT US</a>
+            <a href="types_of_energy.html">TYPES OF ENERGY</a>
+            <a href="comparisons.html">COMPARISONS</a>
+        </div>
+    </div>
+
+    <script>
+        //When users click on "sandwich icon", open or show the curtain menu layer
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+        //Write the closeNav() method here
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+
+
+    <!--Header section-->
+    <header class="centralize-vertical">
+        <h1 class="header-title-centered">The Power Source</h1>
+        <img src="Screenshot 2025-08-08 114140.png" alt="logo" class="logo-header">
+    </header>
+
+    <!--Main Section-->
+    <main>
+        <div id="contact-us-page-center" class="contact-us-page-center">
+            <div>
+                <h3>Translate this page to:</h3>
+                <div id="google_translate_element"></div>
+            </div>
+            <div>
+                <form method="get" action="https://www.google.com/search" target="_blank">
+                    <label>keywords: </label>
+                    <input type="text" name="q">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+
+            </script>
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+            </script>
+            <h1>Contact us:</h1>
+            <p>Let us know if you find any mistakes in our info. We try hard to keep everything up to date </p>
+            <hr>
+            <form class="contact-form">
+                <div class="row">
+                    <div class="col-25">
+                    <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-25">
+                    <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                    <label for="email">Email</label>
+                    </div>
+                    <div class="col-75">
+                    <input type="email" id="email" name="email" placeholder="Your email..">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-25">
+                    <label for="city">City</label>
+                    </div>
+                    <div class="col-75">
+                    <select id="city" name="city">
+                        <option value="auckland">Auckland</option>
+                        <option value="gisborne">Gisborne</option>
+                        <option value="napier">Napier</option>
+                    </select>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-25">
+                    <label for="subject">Message</label>
+                    </div>
+                    <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                
+                <br>
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+		</div>
+    </main>
+
+    <!--Footer Section-->
+    <footer>
+        <p>This Website is for educational purposes <br> Created by Jarod O'Connor <br> This website uses AI to generate information </p>
+    </footer>
+
+</body>
+</html>
