@@ -1,0 +1,556 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*-----------------------------------------------------------*/
+nav {
+    min-height: 5vh;
+    background-color: orange;
+    border: solid 2px rgb(226, 149, 5);
+    display: flex;
+    max-width: 100%;
+    position: fixed;
+    width: 100vw;
+}
+.sandwich-icon-area {
+    font-size: 2em;
+    float: none;
+    cursor: pointer;
+}
+
+/*Define styles for the curtain menu layer*/
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none; /*block: show; none: hide*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    z-index: 3; /*Make this layer sit on top of other layer*/
+}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none; /*remove all default styles*/
+    font-size: 2.0em;/*1em=16px => 2em = 32px*/
+    color: white;
+    display: block;
+}
+.close-icon {
+    position: absolute;
+    top: 1.0em;
+    right: 1.5em; /*1.5em = 1.5*16px = 24px */
+    font-size: 4.0em;
+    color: white;
+}
+/*Add hover effect to the hyperlinks */
+.overlay a:hover, .overlay a:focus {
+    color: green;
+}
+
+/*--Header--*/
+header {
+    min-height: 10vh;
+    background-color: rgb(90, 201, 201);
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    max-width: 100%;
+    padding-top: 50px;
+}
+
+.header-title-centered {
+    flex-basis: 80%;
+    align-items: center;
+}
+
+.logo-header {
+    width: 20%;
+    max-width: 100px;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    justify-content: right;
+
+}
+
+/*--Main--*/
+main {
+    background-color: white;
+    min-height: 80vh;
+    display: block;
+    max-width: 100%;
+
+}
+.home-info {
+    border: solid 2px orange;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 1em;
+    background-color: white;
+    min-height: 30vh;
+    width: 90%;
+    text-align: center;
+    
+}
+.home-info img {
+    display: block;
+    margin: 10px auto;
+}
+
+.main-image {
+    min-width: 150px;
+    min-height: 100px;
+}
+.home-page-center {
+    background-color: white;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*--footer--*/
+footer {
+    min-height: 5vh;
+    background-color: orange;
+    border: solid 2px rgb(226, 149, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 1.1em;
+    font-weight: bold;
+    align-items: center;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us-page-center {
+    background-color: white;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-form {
+    border: solid 2px orange;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 1em;
+    background-color: white;
+    height: 80vh;
+    width: 90%;
+}
+
+.contact-form input[type=text], .contact-form input[type=email],
+.contact-form select, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contact-form label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.contact-form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact-form input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  /*Button*/
+  width: 100%;
+  margin-top: 0;
+}
+	
+.contact-form .col-25, .contact-form .col-75 {
+    width: 100%;
+    margin-top: 0;
+ }
+
+
+/* Clear floats after the columns */
+.contact-form .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*types of energy page info*/
+
+.types-of-energy-main {
+    min-height: 80vh;
+    max-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.types-of-energy {
+    min-height: 20vh;
+    color: black;
+    padding: 12px 20px;
+    border: solid 2px orange;
+    margin: 20px;
+    border-radius: 1em;
+    background-color: white;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.energy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.energy-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.energy-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.energy-description {
+    text-align: center;
+    line-height: 1.4;
+    margin: 15px 0;
+    max-width: 600px;
+}
+
+.types-of-energy-tts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin-bottom: -10px;
+}
+
+/*comparison page info*/
+.compare-hotbar {
+    display: flex;
+}
+
+.left-compare-info,
+.right-compare-info {
+    display: flex;
+    flex-direction: column; /* stack title then content */
+    gap: 10px;
+    align-items: stretch;
+    border: solid 2px orange;
+    background-color: white;
+    padding: 12px 20px;
+    margin: 20px;
+    border-radius: 1em;
+    width: 90vw;
+}
+
+/* Ensure inner comparison block uses full width */
+.comparison-content {
+    width: 100%;
+}
+
+/* Tidy spacing for headings and lists to avoid overlap */
+.left-compare-info h3,
+.right-compare-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.25em;
+}
+
+.comparison-content h4 {
+    margin: 8px 0 6px;
+}
+
+.comparison-content ul {
+    margin: 0 0 12px 1.2em;
+    padding-left: 0;
+}
+
+/*info page styles*/
+.info-page-container {
+    min-height: 80vh;
+    max-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px orange;
+    background-color: white;
+    padding: 12px 20px;
+    margin: 20px;
+    border-radius: 1em;
+    width: 80vw;
+}
+
+.text-to-speech-buttons {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.text-to-speech-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.types-of-energy-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.types-of-energy-information h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.types-of-energy-information img {
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.types-of-energy-information p {
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: left;
+}
+
+/*tts buttons on types of energy description page*/
+.speech-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.speech-controls button {
+    padding: 8px 16px;
+    border: 1px solid orange;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.speech-controls button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/*----------------------------------------------------------*/
+/*All the below CSS styles will be applied for MEDIUM SCREENS */
+@media screen and (min-width: 426px) {
+    /*All styles here are for medium screens */
+    main {
+        background-image: url(../Images/tesla\ coil.jpg);
+        display: flex;
+        place-content: center;
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
+    }
+	
+    .home-page-center {
+        background-color: rgba(255, 255, 255, 0.7);
+        align-self: center;
+        width: 80vw;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+		
+	/*MEDIUM SCREEN: CONTACT FORM*/
+    .contact-us-page-center {
+        width: 80vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.7);
+
+    }
+
+	.contact-form .col-25 {
+	  float: left;
+	  width: 25%;
+	  margin-top: 6px;
+	}
+
+	.contact-form .col-75 {
+	  float: left;
+	  width: 75%;
+	  margin-top: 6px;
+	}
+	
+	.contact-form input[type=submit] {
+	  width: 100px;
+	}	
+
+    .left-compare-info, .right-compare-info {
+        width: 80vw;
+    }
+
+	/* Clear floats after the columns */
+	.contact-form .row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+
+    /*types of energy page*/
+    .types-of-energy {
+        width: 80vw;
+    }
+
+    .energy-content {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .energy-content > div {
+        flex: 1;
+    }
+
+    .energy-image {
+        order: 2;
+        width: 200px;
+        height: 150px;
+        margin-left: 20px;
+    }
+
+    .energy-title {
+        text-align: left;
+    }
+
+    .energy-description {
+        text-align: left;
+        margin-right: 20px;
+    }
+
+    .left-compare-info,
+    .right-compare-info {
+        width: 80vw; /* existing value for medium screens */
+        flex-direction: column;
+    }
+
+}
+
+/*----------------------------------------------------------*/
+/*All the below CSS styles will be applied for BIG SCREENS */
+@media screen and (min-width: 769px) {
+    /*All styles here are for big screens */
+    main {
+        background-image: url(../Images/tesla\ coil.jpg);
+        display: fixed;
+        place-content: center;
+    }
+	
+    .home-page-center {
+        background-color: rgba(255, 255, 255, 0.7);
+        align-self: center;
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+	/*BIG SCREEN: CONTACT FORM*/
+    .contact-us-page-center {
+        width: 90vw;
+        background-color: rgba(255, 255, 255, 0.7);
+
+    }
+
+	.contact-form .col-25 {
+	  float: left;
+	  width: 25%;
+	  margin-top: 6px;
+	}
+
+	.contact-form .col-75 {
+	  float: left;
+	  width: 75%;
+	  margin-top: 6px;
+	}	
+	
+	.contact-form input[type=submit] {
+	   width: 100px;
+	}
+
+	/* Clear floats after the columns */
+	.contact-form .row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+    .right-compare-info, .left-compare-info {
+        width: 90vw;
+    }
+
+    /*types of energy page*/
+    .types-of-energy {
+        width: 90vw;
+    }
+
+    .energy-image {
+        width: 250px;
+        height: 180px;
+    }
+
+    .left-compare-info,
+    .right-compare-info {
+        width: 90vw; /* existing value for large screens */
+        flex-direction: column;
+
+}
+}
